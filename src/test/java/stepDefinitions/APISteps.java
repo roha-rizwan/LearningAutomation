@@ -18,7 +18,7 @@ public class APISteps {
          httpRequest = RestAssured.given();
 
         response = httpRequest.get("");
-        System.out.println("test");
+        System.out.println("testing");
     }
 
     @Then("I validate a successful response")
