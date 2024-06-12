@@ -30,13 +30,6 @@ public class APISteps {
         Assert.assertEquals("Unsuccessful response code - "+response.getStatusCode(),response.getStatusCode(),200);
     }
 
-    @And("Then i validate the body")
-    public void thenIValidateTheBody() {
-        String responseBody= response.asString();
-
-        Assert.assertTrue("Response body contains Norway ", responseBody.contains("Lasalle"));
-    }
-
 
     @Then("Then i validate email detail is not null")
     public void thenIValidateemailDetailsIsNotNull() {
@@ -64,8 +57,14 @@ public class APISteps {
 
     @Then("I validate a unsuccessful response")
     public void iValidateAUnsuccessfulResponse() {
-        Assert.assertEquals("Unsuccessful response code - "+response.getStatusCode(),response.getStatusCode(),404);
+        Assert.assertEquals("Unsuccessful response code - "+response.getStatusCode(),response.getStatusCode(),404 );
     }
+
+    @And("response body is not empty")
+    public void responseBodyIsNotEmpty() {
+        String responseBody = response.getBody().asString();
+        Assert.assertFalse("Empty response body", responseBody.isEmpty());
     }
+}
 
 

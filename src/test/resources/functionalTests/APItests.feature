@@ -3,6 +3,7 @@ Feature: Sample API tests
   Scenario: To test GET request
     When I issue a GET request
     Then I validate a successful response
+    And response body is not empty
 
   Scenario: To test GET request
     When I issue an invalid GET request
