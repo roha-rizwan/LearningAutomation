@@ -31,14 +31,14 @@ public class APISteps {
     }
 
 
-    @Then("Then i validate email detail is not null")
-    public void thenIValidateemailDetailsIsNotNull() {
-        JsonPath jsonPathEvaluator=response.jsonPath();
+    @Then("I validate email detail is not null")
+    public void iValidateEmailDetailIsNotNull() {
+
+        JsonPath jsonPathEvaluator = response.jsonPath();
 
         List<String> emails = jsonPathEvaluator.getList("results.email");
 
-        for(String email : emails)
-        {
+        for (String email : emails) {
             System.out.println("Login details: " + email);
             Assert.assertFalse("Email address is null", email.isEmpty());
 
@@ -65,6 +65,7 @@ public class APISteps {
         String responseBody = response.getBody().asString();
         Assert.assertFalse("Empty response body", responseBody.isEmpty());
     }
-}
+
+ }
 
 

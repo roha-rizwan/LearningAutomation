@@ -11,4 +11,4 @@ Feature: Sample API tests
 
   Scenario: To test email detail is not null
     When I issue a GET request
-    Then Then i validate email detail is not null
+    Then I validate email detail is not null
