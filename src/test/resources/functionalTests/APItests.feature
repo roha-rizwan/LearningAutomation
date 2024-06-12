@@ -5,7 +5,7 @@ Feature: Sample API tests
     Then I validate a successful response
     And response body is not empty
 
-  Scenario: To test GET request
+  Scenario: To test unsuccessful response
     When I issue an invalid GET request
     Then I validate a unsuccessful response
 
