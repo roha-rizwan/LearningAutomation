@@ -17,10 +17,6 @@ Feature: Sample API tests
     When I issue a GET request
     Then I validate username and password detail is not null
 
-  Scenario: To test username and password detail is not null
-    When I issue a GET request
-    Then I validate username and password detail is not null
-
   Scenario: To test header in get request
     When I issue a GET request
     Then I validate content type

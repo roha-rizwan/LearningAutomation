@@ -1,3 +1,4 @@
+@UI
 Feature: Sample tests for E-commerce website
 
   Scenario: Add items to cart
