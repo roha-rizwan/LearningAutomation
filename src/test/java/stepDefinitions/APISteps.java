@@ -21,6 +21,7 @@ public class APISteps {
         RestAssured.baseURI = "https://randomuser.me/api/";
         httpRequest = RestAssured.given();
         response = httpRequest.get("");
+        System.out.println("test");
         response.prettyPrint();
     }
     @Then("I validate a successful response")
